@@ -16,13 +16,18 @@ Para el desarrollo de este proyecto decidimos trabajar con el entorno de desarro
 
 Para tener una clara visualización de todas las relaciones de tablas que maneja el proyecto decidimos crear un diagrama del modelo relacional de nuestra base de datos. ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.001.png)Aquí se encuentran nuestras 3 tablas principales, primero creamos la tabla de sede donde se encontrarán todos los datos de la sede relacionándose bilateralmente con la tabla de afiliados y la tabla de entrenadores relacionada con los afiliados. De esta forma las llaves foráneas de las tablas y entrenadores se encuentran en la tabla de afiliados, debido a que cada afiliado está relacionado con con una sede y cada entrenador tiene encargado a varios afiliados.
 
-![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.002.png)De la siguiente forma se pueden ver los registros en el gestor de bases de datos de phpMyAdmin.
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.002.png)
+
+De la siguiente forma se pueden ver los registros en el gestor de bases de datos de phpMyAdmin.
 
 Tabla entrenador
 
 ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.003.png)
 
-Tabla afiliado![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.004.png)Tabla sede
+Tabla afiliado
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.004.png)
+
+Tabla sede
 
 ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.005.png)
 
