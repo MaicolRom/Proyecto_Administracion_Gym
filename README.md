@@ -1,66 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+﻿**ADMINISTRACIÓN GYM**
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Maicol Romero
 
-## About Laravel
+Santiago Carvajal
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Bases de datos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Universidad EAN
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2022
 
-## Learning Laravel
+**INTRODUCCION**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para el desarrollo de este proyecto decidimos trabajar con el entorno de desarrollo xampp que contiene la base de datos MariaDB, el servidor que funciona con el protocolo HTTP Apache, el lenguaje más usado para el desarrollo web PHP y el lenguaje de programación Perl.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Para tener una clara visualización de todas las relaciones de tablas que maneja el proyecto decidimos crear un diagrama del modelo relacional de nuestra base de datos. ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.001.png)Aquí se encuentran nuestras 3 tablas principales, primero creamos la tabla de sede donde se encontrarán todos los datos de la sede relacionándose bilateralmente con la tabla de afiliados y la tabla de entrenadores relacionada con los afiliados. De esta forma las llaves foráneas de las tablas y entrenadores se encuentran en la tabla de afiliados, debido a que cada afiliado está relacionado con con una sede y cada entrenador tiene encargado a varios afiliados.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.002.png)De la siguiente forma se pueden ver los registros en el gestor de bases de datos de phpMyAdmin.
 
-## Laravel Sponsors
+Tabla entrenador
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.003.png)
 
-### Premium Partners
+Tabla afiliado![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.004.png)Tabla sede
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.005.png)
 
-## Contributing
+Con la relación de las tablas ya completamente claras, procedemos a crear todas las tablas correctamente relacionadas en PhpMyAdmin (escrita en PHP con la intención de manejar la administración de MySQL a través de páginas web).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.006.png)
 
-## Code of Conduct
+Ahora trabajando con ayuda del framework Laravel, facilitamos la entrada a la plataforma con un usuario previamente registrado y llevamos a relacionar todas las tablas creadas en phpMyAdmin con la web de página web de Laravel y aquí se pueden ver las 3 tablas de la CRUD.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Tabla Sede
 
-## Security Vulnerabilities
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.007.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Tabla entrenador
 
-## License
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.008.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Tabla afiliado
+
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.009.png)
+
+De esta forma se puede ver la interfaz al momento de agregar un nuevo registro en las diferentes tablas de la CRUD.
+
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.010.png)
+
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.011.png)
+
+` `Para la base de datos la tecnología selecciona fue SQL Server haciendo uso de los procesos almacenados para realizar todas las funcionalidades que requiere nuestro programa de administración gimnasio.
+
+**PROBLEMATICA**
+
+En el gimnasio Esfuerzo Vital, realizar una gestión de los datos de sus afiliados se había convertido en todo un problema porque el manejo de esa gran cantidad de datos en un Excel es muy molesto y poco profesional, además de las posibles vulnerabilidades que genera para los datos de los clientes, entrenadores y datos del mismo gimnasio. Entre otros problemas se encuentra el de los procesos de crecimiento de la empresa con nuevas sedes y por ende más afiliados se convierte en una necesidad el desarrollo e implementación de una aplicación dedicada exclusivamente a la administración de los datos bajo una base de datos relacional.
+
+La implementación de esta herramienta le permitirá a la empresa afrontar los nuevos retos que vendrán en los próximos años debido a su constante expansión, dándole posibilidades de ser más competente en su mercado laboral y diferenciarse de su competencia directa. Accediendo a una mayor capacidad de almacenamiento para sus registros, mejor eficiencia y diseño personalizado.
+
+**LEVANTAMINETO DE REQUERIMINTOS**
+
+En el momento que nos contactamos con el dueño del gimnasio y nos explicó sus necesidades pudimos realizar el levantamiento de requerimientos de la siguiente forma:
+
+![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.012.png)
