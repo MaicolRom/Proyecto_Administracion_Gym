@@ -25,6 +25,7 @@ Tabla entrenador
 ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.003.png)
 
 Tabla afiliado
+
 ![](Aspose.Words.f683b4ad-c2fc-430a-a46d-f8d173e2b578.004.png)
 
 Tabla sede
